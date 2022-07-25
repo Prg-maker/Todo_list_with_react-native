@@ -3,8 +3,17 @@ import { styled } from "./style";
 
 import StudentImg from "../../assets/student.svg";
 import { Button } from "../../components/Button";
+import { useState } from "react";
 
 export function Home() {
+
+  const [isLoading , setIsLoading] = useState(true)
+
+
+  function handleToggleIsLoadingTest(){
+    setIsLoading(false)
+  }
+
   return (
     <View style={styled.container}>
       <StudentImg />
@@ -18,6 +27,8 @@ export function Home() {
 
       <Button
         title="Get Started"
+        onPress={handleToggleIsLoadingTest}
+        isLoading={isLoading}
       />
 
     </View>

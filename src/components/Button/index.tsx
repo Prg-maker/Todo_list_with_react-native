@@ -1,19 +1,29 @@
-import {Text, TouchableOpacity , TouchableOpacityProps , StyleSheet} from 'react-native'
+import {Text, TouchableOpacity , TouchableOpacityProps , StyleSheet, ActivityIndicator} from 'react-native'
 import theme from '../../theme'
 
 type Props = TouchableOpacityProps & {
-  title:string
+  title:string,
+  isLoading?: boolean
 }
 
-export function Button({title , ...rest}:Props){
+export function Button({title , isLoading = true , ...rest}:Props){
   return(
     <TouchableOpacity
       style={styled.button}
       {...rest}
     >
-      <Text style={styled.title}>
-        {title}
-      </Text>
+      {
+        !isLoading ? 
+        
+        <ActivityIndicator
+          size={32}
+        />
+        :
+        
+        <Text style={styled.title}>
+          {title}
+        </Text>
+      }
     </TouchableOpacity>
   )
 }
