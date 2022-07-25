@@ -11,7 +11,7 @@ export function AppLoading(){
 
 const styled = StyleSheet.create({
   container:{
-    flex: 1,
+    height: '100%',
     justifyContent:'center',
     alignItems:'center'
   }
