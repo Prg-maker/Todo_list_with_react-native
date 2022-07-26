@@ -4,16 +4,22 @@ import theme from '../../theme';
 
 import CheckImg from '../../assets/Check.svg'
 
-export function CheckBox() {
 
-  const [isCheck , setIsCheck] = useState(false)
 
-  function handleIsCheck(){
-    setIsCheck(!isCheck)
-  }
+interface PropsCheckBox{
+  isCheck:boolean,
+  toggleIsCheck: ()=> void
+}
+
+export function CheckBox({
+  isCheck,
+  toggleIsCheck
+}:PropsCheckBox) {
+
+
 
   return (
-    <TouchableOpacity style={styles.checkbox} onPress={handleIsCheck}>
+    <TouchableOpacity style={styles.checkbox} onPress={toggleIsCheck} >
       {isCheck && <CheckImg/>}
     </TouchableOpacity>
   );

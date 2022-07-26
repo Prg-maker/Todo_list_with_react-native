@@ -39,5 +39,14 @@ export const styles = StyleSheet.create({
     marginTop:45,
     marginLeft:26,
     marginRight:42
+  },
+  containerMessageOption:{
+    alignItems:'center',
+    marginTop:20
+  },
+  messageOption:{
+    fontFamily:theme.fonts.fontsBold,
+    fontSize:20,
+    paddingBottom:20
   }
 });
