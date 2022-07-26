@@ -6,11 +6,11 @@ import { styles } from './styles';
 import TodoListImg from '../../assets/to-do-list.png'
 
 type Props = ModalProps & {
-
+  OpenAndCloseModal: ()=> void
 }
 
 
-export function ModalViewTask({...rest}:Props) {
+export function ModalViewTask({OpenAndCloseModal,...rest}:Props) {
 
   const [tasks , setTasks] = useState([
     {
@@ -72,7 +72,7 @@ export function ModalViewTask({...rest}:Props) {
 
             <Text style={styles.subTitle}>Daily Tasks</Text>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={OpenAndCloseModal}>
               <CircleX
                 width={30}
                 height={30}

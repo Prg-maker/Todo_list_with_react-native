@@ -1,4 +1,5 @@
 import { TextInput , TextInputProps , StyleSheet} from "react-native";
+import theme from "../../theme";
 
 
 
@@ -13,9 +14,10 @@ export  function Input({...rest}: TextInputProps){
 
 const styles = StyleSheet.create({
   input:{
+    fontFamily:theme.fonts.fontsMedium,
     width: '100%',
     height: 50,
-    borderRadius:50,
+    borderRadius:10,
     paddingLeft:21,
     marginBottom:10,
     backgroundColor: 'rgba(255, 255, 255, 0.58)',

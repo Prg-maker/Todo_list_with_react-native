@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     height: '35%',
     backgroundColor:theme.colors.color_button,
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
   },
   avatar:{
     width: 115,

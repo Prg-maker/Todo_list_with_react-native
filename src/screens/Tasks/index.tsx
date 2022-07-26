@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Image, Text, View } from 'react-native';
+import { ModalCreateTask } from '../../components/ModalCreateTask';
 import { ModalViewTask } from '../../components/ModalViewTask';
 import { styles } from './styles';
-export function Tasks() {
 
+
+
+export function Tasks() {
+  const [isOpen , setIsOpen] = useState(true)
+
+  function handleIsOpen(){
+    setIsOpen(!isOpen)
+  }
 
   return (
     <View style={styles.container}>
@@ -14,7 +22,9 @@ export function Tasks() {
         <Text style={styles.name}>Welcome Daniel</Text>
       </View>
 
-      <ModalViewTask/>
+      {
+        isOpen? <ModalViewTask OpenAndCloseModal={handleIsOpen}/> : <ModalCreateTask OpenAndCloseModal={handleIsOpen}/>
+      }
 
     </View>
   );
