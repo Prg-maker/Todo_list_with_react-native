@@ -32,7 +32,9 @@ export function Register() {
 
           <View style={styles.containerLink}>
 
-            <Text style={styles.textLink}>Already have an account?  </Text>
+            <Text style={styles.textLink}>Already have an account?
+              
+            `</Text>
 
             <TouchableOpacity >
               <Text style={styles.buttonLink}>Sing In</Text>
