@@ -36,6 +36,8 @@ export const styles = StyleSheet.create({
 
   },
   containerTask:{
-    
+    marginTop:45,
+    marginLeft:26,
+    marginRight:42
   }
 });

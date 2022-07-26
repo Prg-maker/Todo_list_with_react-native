@@ -1,7 +1,9 @@
 import React from 'react';
-import { Button, Modal, ModalProps , Text, TouchableOpacity, View} from 'react-native';
+import { Button, FlatList, Modal, ModalProps , ScrollView, Text, TouchableOpacity, View} from 'react-native';
 import CircleX from '../../assets/CircleX.svg'
+import { Task } from '../Task';
 import { styles } from './styles';
+
 
 type Props = ModalProps & {
 
@@ -30,7 +32,11 @@ export function ModalViewTask({...rest}:Props) {
 
 
           <View style={styles.containerTask}>
-            
+
+          <Task
+            title='nova tarefa'
+          />
+
           </View>
 
         </View>
