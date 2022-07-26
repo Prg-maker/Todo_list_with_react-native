@@ -5,6 +5,7 @@ import { Home } from './src/screens/Home';
 
 import {useFonts , Poppins_400Regular , Poppins_700Bold} from '@expo-google-fonts/poppins'
 import { Register } from './src/screens/Register';
+import { Login } from './src/screens/Login';
 
 export default function App() {
 
@@ -16,7 +17,7 @@ export default function App() {
   return (
     <View >
 
-      {!isLoadingFonts ? <AppLoading/> :<Register/>}
+      {!isLoadingFonts ? <AppLoading/> :<Login/>}
 
       <StatusBar style="dark" />
     </View>
